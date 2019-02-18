@@ -6,3 +6,15 @@ This will find all txt file (-name '*.txt'） in the current working directory (
 *find . \( -name '*.txt' -o -name '*.csv' \) -exec wc -w {} +*
 If you want to find multiple type of files, like txt file and csv file
 
+
+2. Write a shell script to word counts on individual files
+
+#!/bin/bash
+for file in *;
+do 
+if [[ -s $file ]];
+then wc -w $file >> wc.txt;
+else 
+echo "${file} sorry this file is empty" >> wc.txt; 
+fi;
+done
