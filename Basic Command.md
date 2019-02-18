@@ -5,6 +5,7 @@
 This will find all txt file (-name '.txt'） in the current working directory (.) and recursing into subdirectories and for each result will execute (-exec [...] \;) wc -w passing that filename ({}) as an argument
 
 2. find . \( -name '*.txt' -o -name '*.csv' \) -exec wc -w {} +
+
 If you want to find multiple type of files, like txt file and csv file
 
 
