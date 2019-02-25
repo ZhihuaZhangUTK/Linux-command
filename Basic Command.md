@@ -20,3 +20,7 @@ else
 echo "${file} sorry this file is empty" >> wc.txt; 
 fi;
 done
+
+
+## wget fasta file
+wget "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=CP002565.1&rettype=fasta" -O b.fa
