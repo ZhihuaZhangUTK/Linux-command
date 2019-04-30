@@ -24,3 +24,7 @@ done
 
 ## wget fasta file
 wget "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=CP002565.1&rettype=fasta" -O b.fa
+
+## add a character into a string
+for i in *.gz; do mv $i `echo $i | sed -r -e 's/_/_S/'`; done;
+for i in *.gz; do mv $i `echo $i | sed -r -e 's/^([^_]*)_(.*)/\1_S\2/'`; done;
